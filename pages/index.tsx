@@ -16,6 +16,8 @@ export default function Index({
   region,
   country,
   currencyCode,
+  longitude,
+  latitude,
   currencySymbol,
 }) {
   name = decodeURIComponent(name)
@@ -102,6 +104,14 @@ export default function Index({
                 <strong>{'x-vercel-ip-country: '}</strong>
                 {country}
               </p>
+              <p>
+                <strong>{'x-vercel-ip-longitude: '}</strong>
+                {longitude}
+              </p>
+              <p>
+                <strong>{'x-vercel-ip-latitude: '}</strong>
+                {latitude}
+              </p>
             </pre>
           </div>
         </section>
@@ -109,5 +119,6 @@ export default function Index({
     </div>
   )
 }
+
 
 Index.Layout = Layout
